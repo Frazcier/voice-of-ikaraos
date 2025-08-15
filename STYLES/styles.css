@@ -7,11 +7,143 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 1.4rem;
+
+a {
+    color: var(--text-black);
+    text-decoration: none;
 }
 
-/***** TISTING IRIA *****/
-h1 {
-    text-align: center;
+li {
+    list-style-type: none;
 }
+
+/***** HEADER/TOP-NAVIGATION SECTION *****/
+header {
+    display: flex;
+    top: 0;
+    position: sticky;
+    padding: 0 1rem;
+    align-items: center;
+    z-index: 1;
+    background-color: var(--background-white);
+    justify-content: space-between;
+    transition: all 0.3s ease;
+
+    & :is(.col-1, .col-2) {
+        display: flex;
+    }
+
+    & .col-1 {
+        gap: 1.4rem;
+        user-select: none;
+    }
+
+    & .logo-link {
+        cursor: pointer;
+        color: var(--text-black);
+        text-decoration: none;
+    }
+
+    & .col-1 p {
+        font-size: 1.2rem;
+        font-weight: 500;
+
+        & span {
+            font-weight: 600;
+        }
+    }
+
+    & .col-2 label {
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        padding: 1rem 1.2rem;
+        height: 100%;
+        text-align: center;
+        transition: all 0.3s ease;
+        
+        &::after {
+            content: "";
+            position: absolute;
+            margin-bottom: 0.4rem;
+            left: 50%;
+            transform: translate(-50%);
+            width: 70%;
+            bottom: 0;
+            height: 0;
+            background: red;
+            border-top-right-radius: 10rem;
+            border-top-left-radius: 10rem;
+            border-bottom: 0;
+            transition: all 0.3s ease;
+        }
+    }
+
+    &:is(#home-content, #explore-content, #nearby-content) {
+        width: 100%;
+    }
+}
+
+header.scrolled {
+    box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1)
+}
+
+#home:checked ~ header .col-2 label[for="home"],
+#explore:checked ~ header .col-2 label[for="explore"],
+#nearby:checked ~ header .col-2 label[for="nearby"] {
+    color: red;
+}
+
+#home:checked ~ header .col-2 label[for="home"]::after,
+#explore:checked ~ header .col-2 label[for="explore"]::after,
+#nearby:checked ~ header .col-2 label[for="nearby"]::after {
+    height: 0.2rem;
+}
+
+#home:checked ~ .content-container #home-content,
+#explore:checked ~ .content-container #explore-content,
+#nearby:checked ~ .content-container #nearby-content {
+    display: block;
+}
+
+header .col-2 label[for="home"]:active,
+header .col-2 label[for="explore"]:active,
+header .col-2 label[for="nearby"]:active {
+    background-color: var(--background-lightgrey);
+}
+
+.content-container > section {
+    display: none;
+}
+
+.content-container {
+    margin: 1rem 3rem;
+}
+
+/***** SECTIONS SECTION *****/
+:is(#home-content, #explore-content, #nearby-content) {
+    animation:slide-in-top 0.5s ease-in-out both
+}
+
+#home-content {
+    background-color: var(--background-white);
+}
+
+#explore-content {
+    background-color: var(--background-white);
+}
+
+#nearby-content {
+    background-color: var(--background-white);
+}
+
+
+/***** ICONS SECTION *****/
+.material-symbols-outlined {
+    cursor: pointer;
+}
+
+
+/***** ANIMATIONS SECTION *****/
+@keyframes slide-in-top{0%{transform:translateY(-6px);opacity:0}100%{transform:translateY(0);opacity:1}}
