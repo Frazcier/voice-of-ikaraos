@@ -1,8 +1,36 @@
 :root {
-    --text-black: #000000;
-    --text-grey: #808080;
-    --text-lightgrey: #D3D3D3;
-    --background-white: #FFFFFF;
-    --background-grey: #808080;
-    --background-lightgrey: #D3D3D3;
+    --text-color: #0F1C2E;
+    --background-color: #F2E9DD;
+    --panel-color: #ffffff;
+    --muted-color: #364357;
+    --accent-color: #0EA5A3;
+    --accent-2-color: #5B7F6B;
+    --earth-color: #C77939;
+    --alert-color: #B23B3B;
+    --border-color: #e6decf;
+    --shadow-attr: 0 0.125rem 0.75rem rgba(15, 28, 46, 0.08);
+    --radius-attr: 0.75rem;
+    --space: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2rem;
+    --space-5: 3rem;
+    --max-width: 1180px;
+    --font-ui: Inter, ui-sans-serif, system-ui, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+    --font-reading: "Noto Serif", Georgia, serif;
+    --focus-color: #0EA5A3;
+}
+
+:root[data-theme="dark"] {
+    --text-color: #E9EDF3;
+    --background-color: #0F1C2E;
+    --panel-color: #121a26;
+    --muted-color: #9FB0C6;
+    --accent-color: #22C5BE;
+    --accent-2-color: #77BFA3;
+    --earth-color: #D19054;
+    --alert-color: #F08A8A;
+    --border-color: #233248;
+    --shadow-attr: 0 0.125rem 0.75rem rgba(0, 0, 0, 0.35);
+    --focus-color: #22C5BE;
 }
