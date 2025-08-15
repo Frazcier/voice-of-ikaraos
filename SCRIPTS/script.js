@@ -1,18 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-    box = new LetMeScroll({
-     selector: "#main",
-     config : {
-           dimensions : {
-               width : "auto",
-               height : "auto"
-           },
-           scroll : {
-             bottomOffset: 0,
-             autoHide: true
-           }
-     }
-   });
-});
 
 document.querySelectorAll(".nav-item").forEach(label => {
   label.addEventListener("click", () => {
