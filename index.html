@@ -14,11 +14,11 @@
     <input type="radio" id="exhibitions" name="selection" hidden>
     <input type="radio" id="stories" name="selection" hidden>
     <input type="radio" id="collections" name="selection" hidden>
-    <input type="radio" id="maps" name="selection" hidden>
+    <input type="radio" id="map" name="selection" hidden>
     
     <header class="scrolled">
         <div class="col-1">
-            <p><label for="home" class="logo-link"><span>BSU</span> Arts & Culture emememe</label></p>
+            <label for="home" class="logo-link nav-item"><span>BSU</span> Arts & Culture emememe</label>
         </div>
 
         <div class="col-2">
@@ -26,7 +26,7 @@
             <label for="exhibitions" class="nav-item">Exhibitions</label>
             <label for="stories" class="nav-item">Stories</label>
             <label for="collections" class="nav-item">Collections</label>
-            <label for="maps" class="nav-item">Maps</label>
+            <label for="map" class="nav-item">Map</label>
             <button class="theme-btn" id="themeToggle" aria-pressed="false">🌙 Dark</button>
         </div>
     </header>
@@ -58,7 +58,7 @@
             </div>
 
             <div class="tiles" style="margin-top: var(--space-4);">
-                <label class="tile" for="maps">
+                <label class="tile" for="map">
                     <img src="ASSETS/landscape.jpg" alt="Landscape" />
                     <div class="body">
                         <h3>Explore by Map</h3>
@@ -242,7 +242,51 @@
         <section id="collections-content">collections</section>
     </div>
         <div class="content-container">
-        <section id="maps-content">maps</section>
+        <section id="map-content">
+            <h1 class="page-title">Map:Street Map Views (Google)</h1>
+            <p class="subtle">Admin areas are for orientation only and are not Indigenous territorial boundaries.</p>
+            
+            <div class="panel">
+                <input type="radio" class="map-input" name="maptab" id="tab-bokod" checked>
+                <input type="radio" class="map-input" name="maptab" id="tab-bontoc" checked>
+                <input type="radio" class="map-input" name="maptab" id="tab-ambuklao" checked>
+                <input type="radio" class="map-input" name="maptab" id="tab-origin" checked>
+                
+                <div class="ref-btns">
+                    <label for="tab-bokod" class="ref">Bokod, Benguet</label>
+                    <label for="tab-bontoc" class="ref">Bontoc, Mountain Province</label>
+                    <label for="tab-ambuklao" class="ref">Ambuklao Dam</label>
+                    <label for="tab-origin" class="ref tk">Eastern Bontoc (approx.)</label>
+                    <a class="ref" href="https://www.google.com/maps/d/viewer?mid=1VIZqTGn-0t39ZXm-Pm-4HTQx745GhS8&hl=en" target="_blank" rel="noopener">Open full Map ↗</a>
+                </div>
+
+                <div class="map-views" style="margin-top: 0.75rem">
+                    <iframe class="view-bokod" title="Bokod, Benguet map"
+                        src="https://www.google.com/maps?q=Bokod%2C+Benguet&output=embed"
+                        loading="lazy" allowfullscreen></iframe>
+
+                    <iframe class="view-bontoc" title="Bontoc, Mountain Province map"
+                        src="https://www.google.com/maps?q=Bontoc%2C+Mountain+Province&output=embed"
+                        loading="lazy" allowfullscreen></iframe>
+
+                    <iframe class="view-ambuklao" title="Ambuklao Dam map"
+                        src="https://www.google.com/maps?q=Ambuklao+Dam%2C+Bokod%2C+Benguet&output=embed"
+                        loading="lazy" allowfullscreen></iframe>
+
+                    <iframe class="view-origin" title="Eastern Bontoc (approx.)"
+                        src="https://www.google.com/maps/d/embed?mid=1VIZqTGn-0t39ZXm-Pm-4HTQx745GhS8&hl=en"
+                        loading="lazy" allowfullscreen></iframe>
+                </div>
+
+                <div class="panel" style="margin-top: 1rem;">
+                    <h3>Notes & Sources</h3>
+                    <ul>
+                        <li>Basemap & data © Google.</li>
+                        <li>Origin ties to eastern Bontoc are from public research; exact sites are not shown.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
 
 
