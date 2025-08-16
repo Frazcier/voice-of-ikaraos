@@ -25,10 +25,6 @@ a {
     text-decoration: none;
 }
 
-li {
-    list-style-type: none;
-}
-
 /***** HEADER/TOP-NAVIGATION SECTION *****/
 header {
     display: flex;
@@ -37,7 +33,7 @@ header {
     padding: 0 1rem;
     align-items: center;
     z-index: 1;
-    background-color: color-mix(in oklab, var(--background-color) 92%, transparent);
+    background-color: color-mix(in oklab, var(--background-color) 80%, transparent);
     backdrop-filter: saturate(120%) blur(6px);
     justify-content: space-between;
     transition: all 0.3s ease;
@@ -57,7 +53,7 @@ header {
         text-decoration: none;
     }
 
-    & .col-1 p {
+    & .col-1 label {
         font-size: 1.2rem;
         font-weight: 500;
 
@@ -99,15 +95,21 @@ header {
         cursor: pointer;
         margin: 0.4rem 0;
         text-align: center;
-        box-shadow: var(--shadow-attr);
-        border-radius: 10rem;
         padding: 0.4rem 0.6rem;
+        border-radius: 10rem;
+        box-shadow: var(--shadow-attr);
         background: var(--accent-color);
+        transition: all 0.3s ease;
     }
 
     &:is(#home-content, #explore-content, #nearby-content) {
         width: 100%;
     }
+}
+
+:root[data-theme="dark"] .col-2 .theme-btn {
+    color: #201b13;
+    background: var(--accent-2-color);
 }
 
 header.scrolled {
@@ -118,7 +120,7 @@ header.scrolled {
 #exhibitions:checked ~ header .col-2 label[for="exhibitions"],
 #stories:checked ~ header .col-2 label[for="stories"],
 #collections:checked ~ header .col-2 label[for="collections"],
-#maps:checked ~ header .col-2 label[for="maps"] {
+#map:checked ~ header .col-2 label[for="map"] {
     color: red;
 }
 
@@ -126,7 +128,7 @@ header.scrolled {
 #exhibitions:checked ~ header .col-2 label[for="exhibitions"]::after,
 #stories:checked ~ header .col-2 label[for="stories"]::after,
 #collections:checked ~ header .col-2 label[for="collections"]::after,
-#maps:checked ~ header .col-2 label[for="maps"]::after {
+#map:checked ~ header .col-2 label[for="map"]::after {
     height: 0.2rem;
 }
 
@@ -134,7 +136,7 @@ header.scrolled {
 #exhibitions:checked ~ .content-container #exhibitions-content,
 #stories:checked ~ .content-container #stories-content,
 #collections:checked ~ .content-container #collections-content,
-#maps:checked ~ .content-container #maps-content {
+#map:checked ~ .content-container #map-content {
     display: block;
 }
 
@@ -142,7 +144,7 @@ header .col-2 label[for="home"]:active,
 header .col-2 label[for="exhibitions"]:active,
 header .col-2 label[for="stories"]:active,
 header .col-2 label[for="collections"]:active,
-header .col-2 label[for="maps"]:active {
+header .col-2 label[for="map"]:active {
     background-color: var(--background-lightgrey);
 }
 
@@ -159,7 +161,7 @@ header .col-2 label[for="maps"]:active {
 
 
 /***** SECTIONS SECTION *****/
-:is(#home-content, #exhibitions-content, #stories-content, #collections-content, #maps-content) {
+:is(#home-content, #exhibitions-content, #stories-content, #collections-content, #map-content) {
     animation:slide-in-top 0.5s ease-in-out both
 }
 
@@ -269,10 +271,22 @@ section {
     }
 }
 
+.ref.tk {
+    color: #704a11;
+    border-color: #e6dcc6;
+    background: #f3efe7;
+}
+
 :root[data-theme="dark"] .ref {
     background: #123a39;
     border-color: #205a58;
     color: #8fe7e3;
+}
+
+:root[data-theme="dark"] .ref.tk {
+    color: #e8c89b;
+    border-color: #4b3a22;
+    background: #2a241a;
 }
 
 .grid {
@@ -353,6 +367,41 @@ section {
 
 :root[data-theme="dark"] .blockquote {
     background: #201b13;
+}
+
+/***** MAP SECTION *****/
+.map-input {
+    display: none;
+}
+
+.map-views {
+    position: relative;
+    min-height: 32.5rem;
+
+    & iframe {
+        display: none;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 32.5rem;
+        border-radius: 0.75rem;
+        border: 0.1rem solid var(--border-color);
+    }
+}
+
+#tab-bokod:checked ~ .map-views .view-bokod,
+#tab-bontoc:checked ~ .map-views .view-bontoc,
+#tab-ambuklao:checked ~ .map-views .view-ambuklao,
+#tab-origin:checked ~ .map-views .view-origin {
+    display: block;
+}
+
+#tab-bokod:checked + label[for="tab-bokod"],
+#tab-bontoc:checked + label[for="tab-bontoc"],
+#tab-ambuklao:checked + label[for="tab-ambuklao"],
+#tab-origin:checked + label[for="tab-origin"] {
+    outline: 0.125rem solid var(--accent-color);
+    outline-offset: 0.125rem;
 }
 
 /***** ICONS SECTION *****/
