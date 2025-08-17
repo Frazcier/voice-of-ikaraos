@@ -12,6 +12,7 @@
     font-family: var(--font-ui);
     line-height: 1.55;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 :is(img, video) {
