@@ -18,14 +18,19 @@
     <header class="scrolled">
         <div class="col-1">
             <label for="home" class="logo-link nav-item"><span>BSU</span> Arts & Culture emememe</label>
+
+            <div class="actions">
+                <button class="theme-btn" id="themeToggle" aria-pressed="false">🌙 Dark</button>
+                <input type="checkbox" id="navToggle" hidden>
+                <label for="navToggle" class="menu-btn" aria-controls="site-nav"></label>
+            </div>
         </div>
 
-        <div class="col-2">
+        <div class="col-2" id="site-nav">
             <label for="home" class="nav-item">Home</label>
             <label for="exhibitions" class="nav-item">Exhibitions</label>
             <label for="stories" class="nav-item">Stories</label>
             <label for="map" class="nav-item">Map</label>
-            <button class="theme-btn" id="themeToggle" aria-pressed="false">🌙 Dark</button>
         </div>
     </header>
 
