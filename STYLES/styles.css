@@ -686,6 +686,6 @@ header .col-2 label.nav-item {
 
 @media(max-width: 960px) {
     .exhibit {
-        grid-template: 1fr;
+        grid-template-columns: 1fr;
     }
 }
