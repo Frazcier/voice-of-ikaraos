@@ -94,8 +94,8 @@ header {
         border: none;
         color: #fff;
         cursor: pointer;
-        margin: 0.4rem 0;
         text-align: center;
+        margin: 0.4rem 0;
         padding: 0.4rem 0.7rem;
         border-radius: 10rem;
         box-shadow: var(--shadow-attr);
@@ -107,10 +107,10 @@ header {
         width: 100%;
     }
 
-    & .actions {
+    & .action {
         display: flex;
         align-items: center;
-        gap: 0.4rem;
+        gap: 0.45rem;
     }
 }
 
