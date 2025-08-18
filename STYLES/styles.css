@@ -12,7 +12,7 @@
     font-family: var(--font-ui);
     line-height: 1.55;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 :is(img, video) {
@@ -184,7 +184,7 @@ header .col-2 label[for="map"]:active {
 
 .content-container {
     max-width: var(--max-width);
-    margin: 0 auto;
+    margin: 2rem auto;
     padding: 0 var(--space-3);
 }
 
@@ -632,13 +632,6 @@ section {
     header .col-2 {
         display: flex;
     }
-
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
 }
 
 @media (max-width: 820px) {
@@ -703,6 +696,10 @@ section {
             display: none;
         }
     }
+
+    .toc {
+        position: static;
+    }
 }
 
 
@@ -710,4 +707,54 @@ section {
     .exhibit {
         grid-template-columns: 1fr;
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#about:checked ~ .content-container #about-content { display: block; }
+
+#about:checked ~ header .col-2 label[for="about"] { color: red; }
+#about:checked ~ header .col-2 label[for="about"]::after { height: 0.2rem; }
+
+/* Footer */
+.site-footer{
+  border-top: 0.1rem solid var(--border-color);
+  background: color-mix(in oklab, var(--background-color) 96%, var(--panel-color));
+  margin-top: var(--space-5);
+}
+.footgrid{
+  display: grid; gap: 1rem; grid-template-columns: 1fr;
+  padding: var(--space-4) 0;
+}
+.footgrid .col h4{ margin: 0 0 0.5rem; }
+.footgrid .col p{ margin: 0.25rem 0; }
+
+.linklist{ list-style: none; padding: 0; margin: 0; }
+.linklist li{ margin: 0.25rem 0; }
+.linklist a{ color: var(--text-color); }
+.linklist a:hover{ color: var(--accent-color); }
+
+.footnote{ border-top: 0.1rem solid var(--border-color); padding: var(--space-2) 0; }
+
+/* Footer responsive grid */
+@media (min-width: 720px){
+  .footgrid{ grid-template-columns: 2fr 1fr 1fr; }
 }
