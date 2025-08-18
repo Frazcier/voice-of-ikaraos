@@ -639,7 +639,7 @@ footer {
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr;
-    padding: var(--space-4) 0;
+    padding: var(--space-2) 0;
 
     & .col h4 {
         margin: 0 0 0.5rem;
