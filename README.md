@@ -13,8 +13,8 @@ A website preserving and showcasing the Karao language.
 - **Allison Marie Kingkingan**    
 - **Jandervien Lastimozo**    
 - **Eathan John Na-oy**    
-- **Carl Andrei Verches**    
-- **Alecks Queeeueueueuueeuueu**    
+- **Filbert Alecks Nono**
+- **Carl Andrei Verches**      
 
 ---
 
