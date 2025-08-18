@@ -21,6 +21,7 @@ A website preserving and showcasing the Karao language.
 ## **🛠️ Technologies Used**  
 - **HTML**  
 - **CSS**  
+- **JAVASCRIPT**
 - **Git**  
 - **Visual Studio**
 
