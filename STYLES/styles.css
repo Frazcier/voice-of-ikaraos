@@ -213,8 +213,7 @@ section {
 }
 
 .hero {
-    display: grid;
-    align-items: center;
+    display: flex;
     gap: var(--space-4);
     transition: all 0.3s ease;
 
