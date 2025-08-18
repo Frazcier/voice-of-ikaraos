@@ -149,24 +149,24 @@ header.scrolled {
 #home:checked ~ header .col-2 label[for="home"],
 #exhibitions:checked ~ header .col-2 label[for="exhibitions"],
 #stories:checked ~ header .col-2 label[for="stories"],
-#collections:checked ~ header .col-2 label[for="collections"],
-#map:checked ~ header .col-2 label[for="map"] {
+#map:checked ~ header .col-2 label[for="map"],
+#about:checked ~ header .col-2 label[for="about"] {
     color: red;
 }
 
 #home:checked ~ header .col-2 label[for="home"]::after,
 #exhibitions:checked ~ header .col-2 label[for="exhibitions"]::after,
 #stories:checked ~ header .col-2 label[for="stories"]::after,
-#collections:checked ~ header .col-2 label[for="collections"]::after,
-#map:checked ~ header .col-2 label[for="map"]::after {
+#map:checked ~ header .col-2 label[for="map"]::after,
+#about:checked ~ header .col-2 label[for="about"]::after {
     height: 0.2rem;
 }
 
 #home:checked ~ .content-container #home-content,
 #exhibitions:checked ~ .content-container #exhibitions-content,
 #stories:checked ~ .content-container #stories-content,
-#collections:checked ~ .content-container #collections-content,
-#map:checked ~ .content-container #map-content {
+#map:checked ~ .content-container #map-content,
+#about:checked ~ .content-container #about-content {
     display: block;
 }
 
@@ -596,6 +596,59 @@ section {
     display: inline-flex;
 }
 
+
+/***** ABOUT US SECTION *****/
+.teams li {
+    font-weight: 800;
+}
+
+
+
+/***** FOOTER SECTION *****/
+footer {
+    margin-top: var(--space-5);
+    border-top: 0.1rem solid var(--border-color);
+    background: color-mix(in oklab, var(--background-color) 90%, var(--panel-color));
+
+    & .linklist {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        & li {
+            margin: 0.25rem 0;
+        }
+
+        & a {
+            color: var(--text-color);
+
+            &:hover {
+                color: var(--accent-color);
+            }
+        }
+    }
+
+    & .footnote {
+        padding: var(--space-2) 0;
+        border-top: 0.1rem solid var(--border-color);
+    }
+}
+
+.footgrid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    padding: var(--space-4) 0;
+
+    & .col h4 {
+        margin: 0 0 0.5rem;
+    }
+
+    & .col p {
+        margin: 0.25rem 0;
+        }
+}
+
 /***** ANIMATIONS SECTION *****/
 @keyframes slide-in-top{0%{transform:translateY(-6px);opacity:0}100%{transform:translateY(0);opacity:1}}
 
@@ -620,6 +673,10 @@ section {
 
     .story-index {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footgrid {
+        grid-template-columns: 2fr 1fr 1fr;
     }
 }
 
@@ -707,54 +764,4 @@ section {
     .exhibit {
         grid-template-columns: 1fr;
     }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#about:checked ~ .content-container #about-content { display: block; }
-
-#about:checked ~ header .col-2 label[for="about"] { color: red; }
-#about:checked ~ header .col-2 label[for="about"]::after { height: 0.2rem; }
-
-/* Footer */
-.site-footer{
-  border-top: 0.1rem solid var(--border-color);
-  background: color-mix(in oklab, var(--background-color) 96%, var(--panel-color));
-  margin-top: var(--space-5);
-}
-.footgrid{
-  display: grid; gap: 1rem; grid-template-columns: 1fr;
-  padding: var(--space-4) 0;
-}
-.footgrid .col h4{ margin: 0 0 0.5rem; }
-.footgrid .col p{ margin: 0.25rem 0; }
-
-.linklist{ list-style: none; padding: 0; margin: 0; }
-.linklist li{ margin: 0.25rem 0; }
-.linklist a{ color: var(--text-color); }
-.linklist a:hover{ color: var(--accent-color); }
-
-.footnote{ border-top: 0.1rem solid var(--border-color); padding: var(--space-2) 0; }
-
-/* Footer responsive grid */
-@media (min-width: 720px){
-  .footgrid{ grid-template-columns: 2fr 1fr 1fr; }
 }

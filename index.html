@@ -7,17 +7,18 @@
     <link rel="stylesheet" href="STYLES/styles.css">
     <link rel="icon" type="image/x-icon" href="ASSETS/test-logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/BMSVieira/letmescroll.js@latest/css/letmescroll.css">
-    <title>BSU Arts & Culture</title>
+    <title>Tribu Ikarao</title>
 </head>
 <body>
     <input type="radio" id="home" name="selection" checked hidden>
     <input type="radio" id="exhibitions" name="selection" hidden>
     <input type="radio" id="stories" name="selection" hidden>
     <input type="radio" id="map" name="selection" hidden>
+    <input type="radio" id="about" name="selection" hidden>
     
     <header class="scrolled">
         <div class="col-1">
-            <label for="home" class="logo-link nav-item"><span>BSU</span> Arts & Culture emememe</label>
+            <label for="home" class="logo-link nav-item"><span>Tribu</span> Ikarao</label>
 
             <div class="action">
                 <input type="checkbox" id="navToggle" hidden>
@@ -30,6 +31,7 @@
             <label for="exhibitions" class="nav-item">Exhibitions</label>
             <label for="stories" class="nav-item">Stories</label>
             <label for="map" class="nav-item">Map</label>
+            <label for="about" class="nav-item">About</label>
             <button class="theme-btn" id="themeToggle" aria-pressed="false">🌙 Dark</button>
         </div>
     </header>
@@ -804,6 +806,125 @@
         </section>
     </div>
 
+    <div class="content-container">
+        <section id="about-content">
+            <h1 class="page-title">About Us</h1>
+            <p class="subtle">
+                We are BSIT 2nd-year students from Benguet State University. This website is a class project created to build a
+                respectful digital exhibit that showcases publicly available knowledge about the Karao people—language notes,
+                origin narratives, feasts, beliefs, and stories, while prioritizing care, attribution, and community review.
+            </p>
+
+            <div class="grid grid-2" style="margin-top: var(--space-3);">
+                <div class="panel">
+                    <h3>Our purpose</h3>
+                    <ul>
+                        <li>Make learning about Karao culture easier for students, educatiors, and the public.</li>
+                        <li>Center respect: use public sources and add clear attributions.</li>
+                        <li>Invite corrections, updates, or withdrawal requests from the community at any time.</li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <h3>How we worked</h3>
+                    <ul>
+                        <li>Reviewed publicly available research and linked to the original sources.</li>
+                        <li>Summarized materials in plain language.</li>
+                        <li>Built with accessibility in mind.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="panel" style="margin-top: var(--space-3);">
+                <h3>Respect and care</h3>
+                <p>
+                    We acknowledge that many forms of knowledge are shared within the Karao community and may not be appropriate for
+                    online display. This exhibit uses public materials and avoids sacred/sensitive details. If any part of this site is
+                    inaccurate, missing context, or better withdrawn, please contact us and we will respond promptly.
+                </p>
+            </div>
+
+            <div class="grid grid-3" style="margin-top: var(--space-3);">
+                <div class="panel teams">
+                    <h3>Team</h3>
+                    <p class="subtle">BSIT 2nd-Year Students • Benguet State University</p>
+                    <ul>
+                        <li>Abat, Arian Dave S.</li>
+                        <li>Baliag, Emerson L.</li>
+                        <li>De Ocampo, MJ G.</li>
+                        <li>Facsoy, Mayumi P.</li>
+                        <li>Garcia, Raven Jesrael E.</li>
+                        <li>Kingkingan, Allison Marie A.</li>
+                        <li>Lastimozo, Jandervien B.</li>
+                        <li>Na-oy, Eathan John T.</li>
+                        <li>Nono, Filbert Alecks</li>
+                        <li>Valdez, Carl Andrei V.</li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <h3>Acknowledgements</h3>
+                    <ul>
+                        <li>Karao community and elders referenced in public sources.</li>
+                        <li>Libraries, archives, and open-access publishers.</li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <h3>Contact</h3>
+                    <p>Have corrections, context, or a request? We'd love to hear from you.</p>
+                    <ul>
+                        <li>Email: <a class="ref" href="mailto: abat.arian13@gmail.com">abat.arian13@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="grid grid-2" style="margin-top: var(--space-3);">
+                <div class="panel">
+                    <h3>Tech & accessibility</h3>
+                    <ul>
+                        <li>HTML, CSS, a small amount of JS (theme toggle, mobile menu)</li>
+                        <li>Responsive layout, sticky/fixed header, keyboard focus styles</li>
+                        <li>Media with alt text and transcript links where possible</li>
+                    </ul>
+                </div>
+                <div class="panel">
+                    <h3>Disclaimer</h3>
+                    <p class="subtle">
+                        This site is a student project. It does not claim to represent the Karao community.
+                        We use public sources and welcome community guidance and corrections. We will update or withdraw materials upon request.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="content-container footgrid">
+            <div class="col">
+                <h4>Tribu Ikarao</h4>
+                <p class="subtle">Student-built digital exhibit showcasing the culture of the Karao.</p>
+            </div>
+            <div class="col">
+                <ul class="linklist">
+                    <li><label for="home" class="nav-item" style="cursor: pointer;">Home</label></li>
+                    <li><label for="exhibitions" class="nav-item" style="cursor: pointer;">Exhibitions</label></li>
+                    <li><label for="stories" class="nav-item" style="cursor: pointer;">Stories</label></li>
+                    <li><label for="map" class="nav-item" style="cursor: pointer;">Map</label></li>
+                    <li><label for="about" class="nav-item" style="cursor: pointer;">About</label></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h4>Contact</h4>
+                <p class="subtle">BSIT 2nd Year • Benguet State University</p>
+                <div class="subtle">Email: <a class="ref" href="mailto: abat.arian13@gmail.com">abat.arian13@gmail.com</a></div>
+            </div>
+        </div>
+        <div class="footnote"> 
+            <div class="content-container">
+                <p class="subtle">© 2025 Tribu Ikarao. Public sources credited. We welcome community corrections and requests for removal.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="SCRIPTS/script.js"></script>
     <script src="SCRIPTS/theme.js"></script>
