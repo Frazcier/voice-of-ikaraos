@@ -427,6 +427,25 @@ section {
     background: #201b13;
 }
 
+.story-meta {
+    margin-top: -0.25rem;
+    font-size: 0.9rem;
+    color: var(--muted-color);
+}
+
+.callout {
+    margin-top: 0.75rem;
+    padding: 0.75rem 1rem;
+    border: 0.1rem solid var(--border-color);
+    border-left: 0.3rem solid var(--accent-color);
+    border-radius: 0.5rem;
+    background: color-mix(in oklab, var(--accent-color) 6%, var(--panel-color));
+}
+:root[data-theme="dark"] .callout {
+    background: color-mix(in oklab, var(--accent-color) 10%, #0f1c23);
+    border-color: #1f3a3a;
+}
+
 /***** MAP SECTION *****/
 .map-input {
     display: none;
